@@ -23,6 +23,9 @@ ln -s /bin/moc-qt5 ~/.local/bin/moc
 export PATH=$PATH:~/.local/bin/qt
 ```
 
+You might need to run the "reconf" script located in ./contrib/scripts/reconf.
+Otherwise ./configure drops an error.
+
 Lastly, run ./configure and make.
 
 Original README below...
