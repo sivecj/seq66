@@ -1,3 +1,33 @@
+# Notes for openSUSE Tumbleweed 
+
+Install these packages:
+
+```bash
+zypper in libjack-devel liblo-devel alsa-devel libqt5-qtbase-devel \
+libqt5-linguist-devel
+```
+
+Next, link the binary files from Qt5 without the "-qt5" at the end. I link them
+to my .local/ directory and add the dir to the PATH only if required.
+
+```bash
+mkdir -p ~/.local/bin/qt
+
+ln -s /bin/qmake-qt5 ~/.local/bin/qmake
+ln -s /bin/rcc-qt5 ~/.local/bin/rcc
+ln -s /bin/uic-qt5 ~/.local/bin/uic
+ln -s /bin/lrelease-qt5 ~/.local/bin/lrelease
+ln -s /bin/lupdate-qt5 ~/.local/bin/lupdate
+ln -s /bin/moc-qt5 ~/.local/bin/moc
+
+export PATH=$PATH:~/.local/bin/qt
+```
+
+Lastly, run ./configure and make.
+
+Original README below...
+
+
 # README for Seq66 0.96.2
 
 Chris Ahlstrom
